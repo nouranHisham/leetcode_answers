@@ -1,0 +1,28 @@
+int search(int* nums, int numsSize, int target){
+    
+    int f = 0;
+    int l = numsSize-1;
+    
+    int middle;
+    
+    while(f <= l) {
+        
+        middle = (f+l)/2;
+        
+         if(nums[middle]==target){
+             return middle;
+             break;
+         }
+        else if(nums[middle]<target){
+            f = middle+1;
+        }
+        else {
+            l = middle-1;
+        }
+        
+    }
+    
+    return -1;
+    
+
+}
